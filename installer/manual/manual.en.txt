@@ -1,0 +1,50 @@
+<p><a name="top"></a></p>
+<h2>Installation nuBuilder4</h2>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<ul>
+<li><a href="#Step_1._Creating_database.">Step 1. Creating database.</a></li>
+<li><a href="#Step_2._Settings_and_access_rights.">Step 2. Settings and access rights.</a></li>
+<li><a href="#Step_3._Running_example_file.">Step 3. Log in.</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>nuBuilder Forte requirements</strong></p>
+<p>In order to run nuBuilder, you will need to have MySQL (Version 5.5 and newer) or MariaDB installed, along with a web server (e.g. Apache or Nginx) that supports PHP (Version 7.1 and newer)</p>
+<p>Advice: With the help of a local server (one that is hosted on your own machine or local computer), you can test your website as many times you want before updating it to the web server. It saves your time as well as it is easy to use. There are packages for different platforms, e.g:&nbsp;<a href="https://www.apachefriends.org/index.html" rel="nofollow">XAMPP</a>,&nbsp;<a href="https://www.wampserver.com/en/" rel="nofollow">WAMP</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/LAMP_(software_bundle)" rel="nofollow">LAMP</a>,&nbsp;<a href="https://en.wikipedia.org/wiki/MAMP" rel="nofollow">MAMP</a>,&nbsp;<a href="https://www.uniformserver.com/" rel="nofollow">Uniform Server</a>&nbsp;etc.</p>
+<p>If you would like your nuBuilder site to send emails, you will also need access to an SMTP server.</p>
+<div style="float: right;">[<a href="#top">top</a>]</div>
+<p><a name="Step_1._Uncompressing_downloaded_file."></a></p>
+<p>&nbsp;</p>
+<h3><strong>Step 1. Creating database.</strong></h3>
+<hr />
+<p>Create a new MySQL or Maria DB database:</p>
+<p>Using a tool like &lsquo;phpMyAdmin&rsquo;, or some other application provided by your hosting provider, create a database and assign it a user-name and password. The name of the database can be whatever you need it to be. (e.g. nubuilder4) (For detailed instructions, see&nbsp;<a href="http://webvaultwiki.com.au/Default.aspx?Page=Create-Mysql-Database-User-Phpmyadmin&amp;NS=&amp;AspxAutoDetectCookieSupport=1" rel="nofollow">here</a>)</p>
+<p>&nbsp;</p>
+<div style="float: right;">[<a href="#top">top</a>]</div>
+<p><a name="Step_2._Settings_and_access_rights."></a></p>
+<h3><strong>Step 2. Settings and access rights.</strong></h3>
+<hr />
+<p>Update the following variables in nuconfig.php:</p>
+<ul>
+<li>nuConfigDBHost</li>
+<li>nuConfigDBName</li>
+<li>nuConfigDBUser</li>
+<li>nuConfigDBPassword</li>
+<li>nuConfigDBGlobeadminUsername</li>
+<li>nuConfigDBGlobeadminPassword</li>
+</ul>
+<p>E.g.:&nbsp;</p>
+<p>$nuConfigDBHost = "127.0.0.1";<br /> $nuConfigDBName = "nubuilder4";<br /> $nuConfigDBUser = "root";<br /> $nuConfigDBPassword = "";<br /> $nuConfigDBGlobeadminUsername = "globeadmin"; //-- globeadmin username<br /> $nuConfigDBGlobeadminPassword = "notpassword"; //-- globeadmin password<br /> $nuConfigTitle = "nuBuilder 4";<br /> $nuConfigIsDemo = false;</p>
+<div style="float: right;">[<a href="#top">top</a>]</div>
+<p><a name="Step_3._Running_example_file."></a></p>
+<h3><strong>Step 3. Log in.</strong></h3>
+<hr />
+<p>After you have completed these steps you should be able to go to a url that will look something like the following:&nbsp;<a href="http://yoursitename.com/nubuilder4/index.php" rel="nofollow">http://yoursitename.com/nubuilder4/index.php</a></p>
+<p>Log in using globeadmin as the user-name and the password you specified.</p>
+<p>&nbsp;</p>
+<p>Congratulations, you now have nuBuilder Forte installed!</p>
